@@ -1,0 +1,31 @@
+{
+  "name": "SideTrap Store",
+  "identifier": "com.sidetrap.store",
+  "subtitle": "Meine Apps zum Sideloaden",
+  "description": "Persönliche Source für AltStore / SideStore.",
+  "website": "https://sidetrap.github.io/ipa-store/",
+  "apps": [
+    {
+      "name": "HermesEnabler",
+      "bundleIdentifier": "com.example.HermesEnabler",
+      "developerName": "SideTrap",
+      "subtitle": "HermesCompanion für Apple Watch",
+      "localizedDescription": "HermesEnabler (HermesCompanion) inkl. Watch-App.",
+      "iconURL": "https://sidetrap.github.io/ipa-store/icon.png",
+      "tintColor": "#3A7BFF",
+      "versions": [
+        {
+          "version": "1.0",
+          "buildVersion": "1",
+          "date": "2026-11-13",
+          "size": 959386,
+          "sha256": "b8cf1cfaa129a61411fc0b7780fe85d2b2f8dab070d01eb8596cf45d883a43f9",
+          "minOSVersion": "17.0",
+          "downloadURL": "https://github.com/SideTrap/ipa-store/raw/main/HermesEnabler.ipa"
+        }
+      ],
+      "appPermissions": { "entitlements": [], "privacy": {} }
+    }
+  ],
+  "news": []
+}
