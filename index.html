@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SideTrap Store</title>
+<style>
+:root{--bg:#fff;--fg:#111;--card:#f2f2f7}
+@media(prefers-color-scheme:dark){:root{--bg:#000;--fg:#fff;--card:#1c1c1e}}
+body{font-family:-apple-system,system-ui,sans-serif;background:var(--bg);color:var(--fg);max-width:640px;margin:0 auto;padding:20px}
+.card{background:var(--card);border-radius:16px;padding:16px;margin:12px 0;display:flex;align-items:center;gap:14px}
+.card img{width:60px;height:60px;border-radius:14px}
+.card div{flex:1}.card small{opacity:.6}
+a.btn{background:#3A7BFF;color:#fff;text-decoration:none;padding:8px 16px;border-radius:20px;font-weight:600}
+</style></head><body>
+<h1>SideTrap Store</h1>
+<p><a href="altstore://source?url=https://sidetrap.github.io/ipa-store/source.json">In AltStore hinzufügen</a> ·
+<a href="sidestore://source?url=https://sidetrap.github.io/ipa-store/source.json">In SideStore hinzufügen</a></p>
+<div id="apps"></div>
+<script>
+fetch('source.json').then(r=>r.json()).then(s=>{
+ document.getElementById('apps').innerHTML=s.apps.map(a=>{const v=a.versions[0];
+ return `<div class="card"><img src="${a.iconURL}" alt=""><div><b>${a.name}</b><br><small>${a.subtitle} · v${v.version} · ${(v.size/1048576).toFixed(1)} MB</small></div><a class="btn" href="${v.downloadURL}">IPA</a></div>`}).join('');
+});
+</script></body></html>
